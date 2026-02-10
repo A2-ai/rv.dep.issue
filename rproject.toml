@@ -1,0 +1,15 @@
+use_lockfile = false
+
+[project]
+name = "rv.dep.issue"
+r_version = "4.4"
+
+repositories = [
+  { alias = "ppm", url = "https://packagemanager.posit.co/cran/__linux__/noble/2025-01-19" },
+   { alias = "prism", url = "https://prism.dev.a2-ai.cloud/rpkgs/stratus/2026-01-14" },
+]
+
+dependencies = [
+  "devtools",
+  { name = "rv.dep.issue", path = ".", dependencies_only = true, install_suggestions = true},
+]
